@@ -1,0 +1,46 @@
+
+#### this is still very much WIP!!!
+
+#### load packages####
+if (!require('susieR')) install.packages('susieR'); library('susieR')
+if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
+if (!require('caret')) install.packages('caret'); library('caret')
+if (!require('Metrics')) install.packages('Metrics'); library('Metrics')
+if (!require('coda')) install.packages('coda'); library('coda')
+if (!require('monomvn')) install.packages('monomvn'); library('monomvn')
+if (!require('MASS')) install.packages('MASS'); library('MASS')
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+if (!require('stringr')) install.packages('stringr'); library('stringr')
+if (!require('tidyr')) install.packages('tidyr'); library('tidyr')
+
+
+#### this is when I have all of the data from all of the simulations ###
+### actual plots### - need to come back to this, because I'll need to pull sim number from the list at the top
+
+datafiles<-list.files("~/Google Drive/Modelscape_Gemma/sims_out/",  pattern="scenario*")
+parameter_metrics_allsims<-list()
+prediction_metrics_allsims<-list()
+methods_times_allsims<-list()
+
+for(j in 1:length(datafiles)){
+  load(datafiles[j])
+  parameter_metrics_allsims[[j]]<-parameter_metrics_long
+  parameter_metrics_allsims[[j]]$sim_number<-j
+  prediction_metrics_allsims[[j]]<-prediction_metrics_long
+  prediction_metrics_allsims[[j]]$sim_number<-j
+  methods_times_allsims[[j]]<-methods_times
+  methods_times_allsims[[j]]$sim_number<-j
+  #rm(list=ls(c("parameter_metrics_long", "prediction_metrics_long", "methods_times")))### should just write over
+}
+
+do.call("rbind", parameter_metrics_allsims)->parameter_metrics_allsims_df
+do.call("rbind", prediction_metrics_allsims)->prediction_metrics_allsims_df
+do.call("rbind", methods_times_allsims)->methods_times_allsims_df
+
+methods_times_allsims_df$method<-rep(c("Lasso", "Ridge", "Blasso", "Susie", "Gemma"), 800) ### only need this for this version,can re-run and won't need
+
+ggplot(parameter_metrics_allsims_df, aes(as.factor(sim_number), measurement, colour=method))+geom_boxplot()+facet_wrap(vars(metric))+xlab('Simulation Number')+ylab("Parameter Metric")+ylim(0,2)+theme_bw()
+
+ggplot(prediction_metrics_allsims_df, aes(as.factor(sim_number), measurement, colour=method))+geom_boxplot()+facet_wrap(vars(metric))+xlab('Simulation Number')+ylab("Prediction Metric")+ylim(0,2)+theme_bw()
+
+ggplot(methods_times_allsims_df, aes(as.factor(sim_number), method))+geom_boxplot()### this is not currently working.

@@ -1,0 +1,5 @@
+﻿scenario,n,p,n_causal,beta_mean,beta_sd
+genomics,1000,100000,15,0.3,0
+hydrology,1000,100,10,3,0
+popbio,50,65,15,0,0.5
+behav,50,30,3,0.3,0

@@ -1,0 +1,4 @@
+﻿scenario,n,p,cluster_size,n_causal,beta_mean,beta_sd,scale
+1,1500,1000,50,10,0.3,0,1
+2,10500,1000,50,10,0.3,0,1
+3,100500,1000,50,10,0.3,0,1
