@@ -64,7 +64,7 @@ cat("elastic complete", fill=T)
 
 runtime['gemma'] <- system.time(
     ## mod_gemma <- run_gemma(sim$X, sim$y, indices=rep(T, length(sim$y))))[3]
-    mod_gemma <- run_gemma(sim$X, sim$y, indices=indices))[3] #we changed this here, because we didn't understand the line above this. gemma runs through like this, but tpr breaks.
+    mod_gemma <- run_gemma(sim$X, sim$y, indices=indices))[3]
 
 par_gemma <- parameter_metrics(sim$beta, mod_gemma$betas$eff)
 total_effect<-mod_gemma$betas$eff+mod_gemma$alphas$alpha ### need both the alpha and beta effects to predict phenotype
