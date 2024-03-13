@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/770594978.svg)](https://zenodo.org/doi/10.5281/zenodo.10815221)
+
 # README 
 
 This repo stores code and output for a manuscript project related to understanding the limits to statistical learning in the life sciences
