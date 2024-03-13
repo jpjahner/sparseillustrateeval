@@ -25,7 +25,7 @@ This work was supported by the Modelscape Consortium with funding from the Natio
 
 * The final 2 bigN scenarios (100 replicates each) were created with [sim_bigN.R](simulations/sim_bigN.R) by calling [sparse_sim.R](simulations/sparse_sim.R)
 
-* See sim_grid_round5.csv and sim_grid_bigN.csv for scenario specifications
+* See [sim_grid_round5.csv](simulations/sim_grid_round5.csv) and [sim_grid_bigN.csv](simulations/sim_grid_bigN.csv) for scenario specifications
 
 
 
