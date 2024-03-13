@@ -13,12 +13,11 @@ This work was supported by the Modelscape Consortium with funding from the Natio
 
 ![](modelscape.png)
 
-More information is on a [Confluence
-page](https://microcollaborative.atlassian.net/wiki/spaces/DR/pages/1692467204/Manuscript+project-Illustration+and+evaluation+of+sparse+learning+methods+for+ecology+and+evolution).
+
 
 ## Simulations
 
-* The scripts used to build the simulated data used in this study are found in the *simulations* directory
+* The scripts used to build the simulated data used in this study are found in the [simulations](simulations/)
 
 * The final 36 core scenarios (100 replicates each) were created with sim_round5.R (by calling sparse_sim.R)
 
