@@ -4,7 +4,7 @@
 
 This repo stores code and output for a manuscript project related to understanding the limits to statistical learning in the life sciences
 
-**Interpretable and predictive models to harness the life science data revolution**
+[Interpretable and predictive models to harness the life science data revolution](https://www.biorxiv.org/content/10.1101/2024.03.15.585297v1)
 
 Joshua P. Jahner, C. Alex Buerkle, Dustin G. Gannon, Eliza M. Grames, S. Eryn McFarlane, Andrew Siefert, Katherine L. Bell, Victoria L. DeLeo, Matthew L. Forister, Joshua G. Harrison, Daniel C. Laughlin, Amy C. Patterson, Breanna F. Powers, Chhaya M. Werner, Isabella A. Oleksy
 
