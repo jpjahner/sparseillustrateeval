@@ -4,7 +4,7 @@
 
 This repo stores code and output for a manuscript project related to understanding the limits to statistical learning in the life sciences
 
-Interpretable and predictive models to harness the life science data revolution
+Interpretable and predictive models based on high-dimensional data in ecology and evolution
 
 
 
