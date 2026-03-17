@@ -11,13 +11,13 @@
 ##################################################
 
 library(dplyr)		## for mutate function
-library(MetBrewer)	## for plot colors
+#library(MetBrewer)	## for plot colors
 
-input <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
-#input <- read.delim("metrics_out_12dec23.txt", header=TRUE, sep=" ")
+#input <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
+input <- read.delim("metrics_out_12dec23.txt", header=TRUE, sep=" ")
 
-scenarios <- read.csv("/project/modelscape/analyses/sparseillustrateeval_bitbucket/simulations/sim_grid_round5.csv", header=TRUE)
-#scenarios <- read.csv("sim_grid_round5.csv", header=TRUE)
+#scenarios <- read.csv("/project/modelscape/analyses/sparseillustrateeval_bitbucket/simulations/sim_grid_round5.csv", header=TRUE)
+scenarios <- read.csv("../../simulations/sim_grid_round5.csv", header=TRUE)
 
 
 ##################################################
@@ -106,8 +106,9 @@ plot_mat <- subset(plot_mat, plot_mat[,5]!="horseshoe_nz F1")
 ## plotting
 ##################################################
 
-plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
-diff_colors <- rev(met.brewer("Hokusai1", 36, "continuous"))
+#plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+plot_colors <- c("white", "#a6cee3", "#1f78b4", "#ffff99", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#b15928")
+#diff_colors <- rev(met.brewer("Hokusai1", 36, "continuous"))
 legend_names <- c("Random Forest", "Ridge (glmnet)", "Ridge (monomvn)", "Elastic Net", "LASSO (glmnet)", "LASSO (monomvn)", "BLASSO (ma)", "BLASSO (nz)", "Horseshoe (ma)", "Horseshoe (nz)", "Spike-and-slab", "SuSiE", "BSLMM")
 
 

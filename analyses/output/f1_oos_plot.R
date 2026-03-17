@@ -11,13 +11,13 @@
 ##################################################
 
 library(dplyr)		## for mutate function
-library(MetBrewer)	## for plot colors
+#library(MetBrewer)	## for plot colors
 
-input <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
-#input <- read.delim("metrics_out_12dec23.txt", header=TRUE, sep=" ")
+#input <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
+input <- read.delim("metrics_out_12dec23.txt", header=TRUE, sep=" ")
 
-scenarios <- read.csv("/project/modelscape/analyses/sparseillustrateeval_bitbucket/simulations/sim_grid_round5.csv", header=TRUE)
-#scenarios <- read.csv("sim_grid_round5.csv", header=TRUE)
+#scenarios <- read.csv("/project/modelscape/analyses/sparseillustrateeval_bitbucket/simulations/sim_grid_round5.csv", header=TRUE)
+scenarios <- read.csv("../../simulations/sim_grid_round5.csv", header=TRUE)
 
 
 ##################################################
@@ -82,7 +82,8 @@ for (i in 1:length(uniq_scenarios))
 ## plotting
 ##################################################
 
-plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+#plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+plot_colors <- c("white", "#a6cee3", "#1f78b4", "#ffff99", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#b15928")
 f1_plot_colors <- plot_colors[c(1,4,5,6,11,13)]
 
 

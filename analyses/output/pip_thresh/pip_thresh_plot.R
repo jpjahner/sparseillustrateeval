@@ -4,10 +4,11 @@
 
 ## JPJ 27 xii 23
 
-.libPaths("/project/modelscape/share/Rlibs/")
+#.libPaths("/project/modelscape/share/Rlibs/")
 library(vioplot)
-library(MetBrewer)	## for plot colors
-plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+#library(MetBrewer)	## for plot colors
+#plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+plot_colors <- c("white", "#a6cee3", "#1f78b4", "#ffff99", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#b15928")
 thresh_colors <- plot_colors[c(7,9,12,13)]
 
 thresh <- read.delim("pips_scenario24_rep1.txt", header=FALSE, sep=" ")
