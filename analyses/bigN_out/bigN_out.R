@@ -12,8 +12,8 @@
 
 library(MetBrewer)	## for plot colors
 
-input_core <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
-#input_core <- read.delim("metrics_out_12dec23.txt", header=TRUE, sep=" ")
+#input_core <- read.delim("/project/modelscape/analyses/sparseillustrateeval_bitbucket/analyses/output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
+input_core <- read.delim("../output/metrics_out_12dec23.txt", header=TRUE, sep=" ")
 
 ## only want to keep core scenarios 11, 14, and 17; and want to remove blassos and horseshoes
 input_core_scens <- subset(input_core, input_core[,1]==11 | input_core[,1]==14 | input_core[,1]==17)
@@ -53,7 +53,8 @@ uniq_scens <- c("11", "14", "17", "bigN_scenario1", "bigN_scenario2")
 nlist <- c(50, 150, 500, 1000, 10000)
 uniq_analyses <- c("forest", "gridge", "ridge", "elastic", "glasso", "lasso", "spike_slab", "susie", "gemma")
 legend_names <- c("Random Forest", "Ridge (glmnet)", "Ridge (monomvn)", "Elastic Net", "LASSO (glmnet)", "LASSO (monomvn)", "Spike-and-slab", "SuSiE", "BSLMM")
-plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
+plot_colors <- c("white", "#a6cee3", "#1f78b4", "#ffff99", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a", "#b15928")
+#plot_colors <- c("white", met.brewer("Redon", 12, "discrete"))
 plot_colors_noBlHo <- plot_colors[-c(7:10)]
 f1_analyses <-c("forest", "elastic", "glasso", "lasso", "spike_slab", "gemma")
 f1_plot_colors <- plot_colors[c(1,4,5,6,11,13)]
